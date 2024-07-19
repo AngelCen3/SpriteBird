@@ -1,0 +1,21 @@
+/* Ajusta el tamaño del contenedor del sprite según el tamaño de un solo frame */
+.sprite-container {
+    width: 150px; /* Ancho de un solo frame del sprite */
+    height: 200px; /* Alto de un solo frame del sprite */
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    justify-content: center
+}
+
+/* Estilo del sprite */
+.sprite {
+    width: 800px; /* Ancho total de la hoja de sprites (8 frames x 100px cada uno) */
+    height: 400px; /* Alto de la hoja de sprites */
+    background: url('/SpriteBird.png') no-repeat;
+    animation: play 4s steps(8) infinite;
+}
+
+/* Animación del sprite */
+@keyframes play {
+    100% { background-position: -800px; } /* Mueve la hoja de sprites hacia la izquierda */
+}
